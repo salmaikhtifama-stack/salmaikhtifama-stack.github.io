@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Hamster</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+
+            /* Gradasi kuning - orange */
+            background: linear-gradient(270deg, #ffd54f, #ff8c00, #ffb300);
+
+            /* Supaya animasi halus */
+            background-size: 400% 400%;
+
+            /* Animasi */
+            animation: gerakGradasi 6s ease infinite;
+        }
+
+        @keyframes gerakGradasi {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 40vh;
+            font-family: Arial;
+        }
+    </style>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="nav-logo">
+                    <B></B>HAMMY STORE 🐹
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><B>Home</li>
+                        <li>About</li>
+                        <li>Our Store</li>
+                        <li>Delivery</li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <form method="post" >
+        Kategori Pelanggan: <br>
+        <select name="Kategori Pelanggan">
+            <option value="VVIP">Pelanggan Prioritas</option>
+            <option value="VIP">Pelanggan Prioritas</option>
+            <option value="Betta">Pelanggan  Non Prioritas</option>
+        </select>
+    </form>
+    <form method="post">
+        Jenis Hamster: <br>
+        <input type="checkbox" name="bacaan" value="syirian">Syirian<br>
+        <input type="checkbox" name="bacaan" value="champbel">Champbel<br>
+        <input type="checkbox" name="bacaan" value="winterWhite">Winter White<br>
+        <input type="checkbox" name="bacaan" value="roborovski">Roborovski<br>
+    </form>
+    <form method="post">
+        Seberapa puas anda berbelanja di toko kami? <br>
+        <input type="radio" name="opsi" value="sangat puas">Sangat Puas <br>
+        <input type="radio" name="opsi" value="puas">Puas<br>
+        <input type="radio" name="opsi" value="tidak memuasakan">Tidak Memuaskan <br>  
+    </form>
+    <b>Alamat Pelanggan</b>
+    <form method="post">
+        <textarea rows="5" cols="30" wrap="physical" name="Alamat Pelanggan"></textarea>
+     </form>
+    <button type="submit">Kirim</button>
+    <button type="reset">Reset</button>
+</body>
+</html>
