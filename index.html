@@ -6,14 +6,40 @@
     <title>Halaman Latihan 1.2</title>
 </head>
 <style>
-    body{
-        font-family: 'Courier New', sans-serif;
-        background-color: #F6FFDC;
-        color: #5E7AC4;
-        margin: 0%;
-        padding: 0%;
-    }
-</style>
+        body {
+            margin: 0;
+            height: 100vh;
+
+            /* Gradasi pink - hijau */
+            background: linear-gradient(270deg, pink, lightgreen);
+
+            /* Ukuran background diperbesar agar bisa bergerak */
+            background-size: 400% 400%;
+
+            /* Animasi */
+            animation: gerakGradasi 8s ease infinite;
+        }
+
+        /* Keyframes animasi */
+        @keyframes gerakGradasi {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-top: 40vh;
+            font-family: Arial;
+        }
+    </style>
 <body>
  
 <div style="background-color: #CFECF3;"    
