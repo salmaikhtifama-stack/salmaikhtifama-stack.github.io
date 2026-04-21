@@ -2,14 +2,42 @@
 <html>
 <head>
     <title>Frame Navigasi</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        iframe {
+            border: none;
+        }
+
+        .menu {
+            width: 25%;
+        }
+
+        .konten {
+            width: 75%;
+        }
+    </style>
 </head>
 
-<frameset cols="25%,75%">
-    <!-- Frame kiri (menu) -->
-    <frame src="menu.html" name="menu">
+<body>
 
-    <!-- Frame kanan (isi) -->
-    <frame src="home.html" name="konten">
-</frameset>
+<div class="container">
+    
+    <!-- KIRI (MENU) -->
+    <iframe src="menu.html" name="menu" class="menu"></iframe>
 
+    <!-- KANAN (KONTEN) -->
+    <iframe src="home.html" name="konten" class="konten"></iframe>
+
+</div>
+
+</body>
 </html>
