@@ -1,35 +1,37 @@
-<style>
-        body {
-            margin: 0;
-            height: 100vh;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, pink, lightgreen);
+}
 
-            /* Gradasi pink - hijau */
-            background: linear-gradient(270deg, pink, lightgreen);
+/* Container biar ada efek kotak */
+.container {
+    padding: 20px;
+}
 
-            /* Ukuran background diperbesar agar bisa bergerak */
-            background-size: 400% 400%;
+/* Judul */
+h2 {
+    color: #333;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+}
 
-            /* Animasi */
-            animation: gerakGradasi 8s ease infinite;
-        }
+/* Menu */
+ul {
+    list-style: none;
+    padding: 0;
+}
 
-        /* Keyframes animasi */
-        @keyframes gerakGradasi {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+ul li {
+    margin: 10px 0;
+}
 
-        h1 {
-            text-align: center;
-            color: white;
-            margin-top: 40vh;
-            font-family: Arial;
-        }
-    </style>
+a {
+    text-decoration: none;
+    color: darkblue;
+    font-weight: bold;
+}
+
+a:hover {
+    color: red;
+}
