@@ -1,10 +1,11 @@
 /* Import font Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
     margin: 0;
-    font-family: 'Luckiest Guy', sans-serif;
+    font-family: 'Press Start 2P', sans-serif;
     color: #F13E93;
+    text-shadow: 3px 3px 0 black;
 
     /* Gradasi bergerak */
     background: linear-gradient(-45deg, #F9B2D7, #CFECF3, #DAF9DE, #F6FFDC);
@@ -52,7 +53,7 @@ a:hover {
 }
 
 body {
-    background-image: url("7.png"); /* ganti dengan nama file gambarmu */
+    background-image: url("8.png"); /* ganti dengan nama file gambarmu */
     background-size: cover;          /* agar memenuhi layar */
     background-repeat: repeat-y;    /* agar tidak diulang */
     background-position: left top;     /* posisi tengah */
