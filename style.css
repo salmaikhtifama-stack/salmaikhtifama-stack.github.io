@@ -1,23 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* ===== IMPORT FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Boogaloo&family=Fredoka+One&family=Indie+Flower&family=Permanent+Marker&family=Pacifico&display=swap');
 
+/* ===== CSS VARIABLES ===== */
+:root {
+  --pink-vanta: #C2185B;
+  --pink-light: #F13E93;
+  --pink-pale: #F9B2D7;
+  --green-main: #2E7D32;
+  --green-light: #66BB6A;
+  --green-pale: #CFECF3;
+  --green-mint: #DAF9DE;
+  --yellow-soft: #F6FFDC;
+  --shadow: rgba(0,0,0,0.25);
+}
+
+/* ===== BODY ===== */
 body {
-    margin: 0;
-    font-family: 'Press Start 2P', sans-serif;
-    color: #F13E93;
-    text-shadow: 3px 3px 0 white;
-
-    /* Gradasi bergerak */
-    background: linear-gradient(-45deg, #F9B2D7, #CFECF3, #DAF9DE, #F6FFDC);
-    background-size: 400% 400%;
-    animation: gradientMove 6s ease infinite;
+  margin: 0;
+  font-family: 'Boogaloo', sans-serif;
+  color: var(--pink-vanta);
+  background: linear-gradient(-45deg, #F9B2D7, #CFECF3, #DAF9DE, #F6FFDC);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite;
 }
 
-/* Animasi */
 @keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
+/* ===== LAYOUT WRAPPER ===== */
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
 /* Container */
 .container {
     padding: 20px;
@@ -44,6 +62,7 @@ a {
 a:hover {
     color: #2E7D32;
 }
+
 
 /* ===== SIDEBAR ===== */
 .sidebar {
@@ -104,13 +123,274 @@ a:hover {
   text-decoration: underline dotted var(--green-main);
 }
 
-/* FOTO BULAT */
+/* ===== MAIN CONTENT ===== */
+.content {
+  flex: 1;
+  padding: 40px 50px;
+  box-sizing: border-box;
+  margin: 18px;
+  border: 3px dashed var(--green-main);
+  border-radius: 20px;
+  background: rgba(255,255,255,0.22);
+  box-shadow: 0 8px 32px var(--shadow);
+}
+
+/* ===== H2 PAGE TITLE ===== */
+h2 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--pink-vanta);
+  text-align: center;
+  letter-spacing: 4px;
+  line-height: 2;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--pink-vanta);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.button-cta{
+    display : inline-block;
+    margin-bottom: 1em;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: 1px solid #2E7D32;
+    background-color: #FFF9C4;
+    color :#F9B2D7;
+}
+
+/* ===== BIODATA ===== */
+.bio-name {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.3rem;
+  font-weight: 400;
+  font-style: normal;
+  color:#66BB6A; 
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 2;
+  text-shadow: 1px 1px 0 var(--pink-pale);
+}
+
+.bio-age {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--pink-vanta);
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 2;
+}
+
+.bio-desc {
+  font-family: 'Boogaloo', sans-serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--green-main);
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 2;
+  text-indent: 30px;
+  background: rgba(255,255,255,0.4);
+  border: 2px solid var(--green-light);
+  border-radius: 14px;
+  padding: 16px 28px;
+  margin: 20px auto;
+  max-width: 580px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* ===== PROFILE IMAGE ===== */
 .profile-img {
-    width: 200px;
-    height: 150px;
-    border-radius: 90%; /* bikin bulat */
-    object-fit: cover;
-    border: 4px solid #F13E93;
-    box-shadow: 0 0 10px #2E7D32(0,0,0,0.3);
-    margin-bottom: 20px;
+  width: 160px;
+  height: 160px;
+  border-radius: 10%;
+  object-fit: cover;
+  border: 5px solid var(--pink-vanta);
+  box-shadow: 0 0 20px var(--shadow);
+  display: block;
+  margin: 20px auto;
+  transition: transform 5ms ease, box-shadow 10ms ease, border-color 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.08) rotate(180deg);
+  box-shadow: 0 0 28px var(--pink-light);
+  border-color: var(--green-main);
+}
+
+/* ===== TABLE ===== */
+.table-section h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--pink-vanta);
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+table {
+  width: 72%;
+  margin: 0 auto 30px;
+  border-collapse: collapse;
+  border: 3px solid var(--pink-vanta);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px var(--shadow);
+}
+
+table th {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--pink-light);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+
+table td {
+  font-family: 'Boogaloo', sans-serif;
+  font-size: 1rem;
+  background-color: #FFF9C4;
+  color: var(--green-main);
+  padding: 10px 14px;
+  text-align: center;
+  border: 1px solid var(--pink-pale);
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+table tr:nth-child(even) td {
+  background-color: var(--pink-pale);
+  color: var(--pink-vanta);
+}
+
+/* ===== HOBBY PAGE ===== */
+.hobby-list {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--green-main);
+  text-align: left;
+  letter-spacing: 1.5px;
+  line-height: 2.4;
+  text-indent: 20px;
+  list-style: decimal;
+  padding: 20px 30px;
+  background: rgba(255,255,255,0.35);
+  border: 2px solid var(--green-light);
+  border-radius: 16px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.hobby-list li strong {
+  font-family: 'Permanent Marker', cursive;
+  color: var(--pink-vanta);
+  font-style: italic;
+  text-decoration: underline wavy var(--green-main);
+}
+
+/* ===== HOBBY PHOTO GALLERY ===== */
+.hobby-photos {
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.photo-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid var(--pink-vanta);
+  box-shadow: 0 4px 16px var(--shadow);
+  background: #fff;
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease,
+              filter 0.4s ease;
+  cursor: pointer;
+}
+
+.photo-frame:hover {
+  transform: scale(1.18) rotate(-5deg);
+  box-shadow: 0 10px 32px rgba(194,24,91,0.55);
+  border-color: var(--green-main);
+  filter: brightness(1.1) saturate(1.35);
+}
+
+.photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.photo-frame:hover img {
+  transform: scale(1.12);
+}
+
+/* ===== KONTAK PAGE ===== */
+.kontak-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.35rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--pink-vanta);
+  text-align: center;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  text-decoration: underline double var(--green-main);
+  border-bottom: 3px solid var(--pink-vanta);
+  padding-bottom: 12px;
+  margin-bottom: 28px;
+}
+
+.kontak-box {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--green-main);
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 2.5;
+  background: rgba(255,255,255,0.42);
+  border: 2px solid var(--pink-light);
+  border-radius: 18px;
+  padding: 26px 44px;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.kontak-box p {
+  margin: 6px 0;
+  transition: color 0.3s, letter-spacing 0.3s;
+}
+
+.kontak-box p:hover {
+  color: var(--pink-vanta);
+  letter-spacing: 3px;
+}
+
+.kontak-box span {
+  font-family: 'Permanent Marker', cursive;
+  color: var(--pink-vanta);
+  text-decoration: underline;
 }
