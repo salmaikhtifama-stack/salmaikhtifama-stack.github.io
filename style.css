@@ -1,11 +1,10 @@
-/* Import font Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
     margin: 0;
     font-family: 'Press Start 2P', sans-serif;
     color: #F13E93;
-    text-shadow: 3px 3px 0 black;
+    text-shadow: 3px 3px 0 white;
 
     /* Gradasi bergerak */
     background: linear-gradient(-45deg, #F9B2D7, #CFECF3, #DAF9DE, #F6FFDC);
@@ -19,55 +18,99 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
 /* Container */
 .container {
     padding: 20px;
     text-align: center;
 }
-
 /* Judul */
 h2 {
     border-bottom: 2px solid #F13E93;
     padding-bottom: 5px;
 }
-
 /* Menu */
 ul {
     list-style: none;
     padding: 0;
 }
-
 ul li {
     margin: 10px 0;
 }
-
 a {
     text-decoration: none;
     color: #F13E93;
     font-weight: bold;
 }
-
 a:hover {
-    color: red;
+    color: #2E7D32;
 }
 
-body {
-    background-image: url("8.png"); /* ganti dengan nama file gambarmu */
-    background-size: cover;          /* agar memenuhi layar */
-    background-repeat: repeat-y;    /* agar tidak diulang */
-    background-position: left top;     /* posisi tengah */
-    height: 100vh;
-    margin: 0;
+/* ===== SIDEBAR ===== */
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  background: linear-gradient(180deg, #F9B2D7 0%, #CFECF3 100%);
+  padding: 30px 20px;
+  box-sizing: border-box;
+  border-right: 3px solid var(--pink-vanta);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 4px 0 16px var(--shadow);
+}
+
+.sidebar h3 {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--pink-vanta);
+  text-align: center;
+  letter-spacing: 4px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  text-decoration: underline wavy var(--green-main);
+  border-bottom: 2px solid var(--pink-vanta);
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 14px 0;
+  text-indent: 6px;
+}
+
+.sidebar ul li a {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--pink-vanta);
+  text-decoration: none;
+  letter-spacing: 2px;
+  line-height: 2;
+  text-transform: capitalize;
+  display: inline-block;
+  transition: color 0.3s ease, letter-spacing 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: var(--green-main);
+  letter-spacing: 4px;
+  transform: translateX(6px);
+  text-decoration: underline dotted var(--green-main);
 }
 
 /* FOTO BULAT */
 .profile-img {
-    width: 150px;
+    width: 200px;
     height: 150px;
-    border-radius: 50%; /* bikin bulat */
+    border-radius: 90%; /* bikin bulat */
     object-fit: cover;
     border: 4px solid #F13E93;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    margin-bottom: 15px;
+    box-shadow: 0 0 10px #2E7D32(0,0,0,0.3);
+    margin-bottom: 20px;
 }
